@@ -3,8 +3,8 @@ analytics-id: #leave blank to not use Analytics
 
 #Subtitle
 subtitle:
-  active: true
-  text: Yet Another Minimal Theme
+  active: false
+  text: 
 
 #Nav 
 nav:
@@ -36,4 +36,4 @@ related-posts:
 
 #Disqus
 disqus:
-  disqus_shortname: "your_username" #Your disqus shortname. Leave blank to deactivate disqus comments
+  disqus_shortname: "alessio-franceschi-blog" #Your disqus shortname. Leave blank to deactivate disqus comments
