@@ -16,11 +16,19 @@ title: Home
     </div>
     {% endif %}
 
-    {% if post.image and site.data.settings.featured-img.active%}
+   {% if site.data.settings.featured-img.active %}
     <div class = "featured-img-container">
+        {% if post.image %}
         <a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}"/></a>
+        {% endif %}
+        {% if post.webm %}
+            <video autoplay="autoplay" loop="loop">
+                <source src="/assets/img/rotation.webm" type="video/webm">
+             </video>
+        {% endif %}
     </div>
     {% endif %}
+
 
     <p>
         {% if post.customexcerpt %}
