@@ -21,10 +21,8 @@ title: Home
         {% if post.image %}
         <a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}"/></a>
         {% endif %}
-        {% if post.webm %}
-            <video autoplay="autoplay" loop="loop">
-                <source src="/assets/img/rotation.webm" type="video/webm">
-             </video>
+        {% if post.video %}
+            {% include gif.html filename = post.video %}
         {% endif %}
     </div>
     {% endif %}

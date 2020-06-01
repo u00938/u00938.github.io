@@ -3,17 +3,14 @@ title: 2D Top-Down Aiming Using the Mouse in Unity3D
 layout: post
 categories: [Unity, C#, Game Design]
 #image: 
-webm: /assets/img/rotation.webm
+video: rotation
 description: "Tutorial on how to rotate a sprite to make it face the mouse cursor. Useful for aiming in top-down shooters."
 ---
 Hello,
 in this short (and first!) post on this blog I would like to show you how to make a sprite face the mouse cursor. This is quite useful for aiming in top-down shooters and similar games.
 You can see an example of this in this gif.
 
-
-<video autoplay="autoplay" loop="loop">
-<source src="/assets/img/rotation.webm" type="video/webm">
-</video>
+{% include gif.html filename = "rotation" %}
 
 Now let's talk about the code. I tried various solutions found on the web, but most of them don't work, work sometimes or work badly. Luckily the easiest solution is also the best one! I found it on [YouTube](https://www.youtube.com/watch?v=_XdqA3xbP2A) and it is made by Danndx.
 
