@@ -17,6 +17,15 @@ pre{
   padding-right: 10px;
   padding-top: 1px;
   padding-bottom: 1px;
+
+  // System font stack for code
+  font-family:
+  "SFMono-Regular",
+  Consolas,
+  "Liberation Mono",
+  Menlo,
+  Courier,
+  monospace;
 }
 
 pre.lineo{
