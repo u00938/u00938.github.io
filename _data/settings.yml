@@ -3,8 +3,8 @@ analytics-id: #leave blank to not use Analytics
 
 #Subtitle
 subtitle:
-  active: false
-  text: 
+  active: true
+  text: U0이는 개발자가 될 수 있을까¿
 #Nav 
 nav:
   pages:
