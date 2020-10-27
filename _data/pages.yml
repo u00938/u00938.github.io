@@ -1,5 +1,5 @@
 pages:
-  - {name: 'TIL', url: 'about.html'}
+#   - {name: 'TIL', url: 'about.html'}
 #   - {name: 'Contact', url: 'contact.html'}
-#   - {name: 'Archive', url: 'archive.html'}
- # - {name: 'Go_to_U00938', url: 'https://github.com/u00938'}
+   - {name: 'TODAY_I_LEARNED', url: 'archive.html'}
+#   - {name: 'Go_to_U00938', url: 'https://github.com/u00938'}
