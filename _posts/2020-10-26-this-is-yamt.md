@@ -2,7 +2,6 @@
 title: 201026_TIL
 layout: post
 categories: [Today_I_Learned]
-image: /assets/img/logo.jpg
 description: ""
 ---
 Today_I_Learned
