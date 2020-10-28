@@ -40,6 +40,8 @@ webmaster_verifications:
   baidu: 
 lang: en_US
 
+disqus_shortname: u00938-github-io
+
 #Highlighter
 kramdown:
   input:          GFM
