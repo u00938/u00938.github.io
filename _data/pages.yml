@@ -3,4 +3,5 @@ pages:
 #   - {name: 'Contact', url: 'contact.html'}
    - {name: 'TODAY_I_LEARNED', url: 'archive.html'}
    - {name: '오답노트', url: 'archive.html'}
+   - {name: 't', url: 'categories.html'}
 #   - {name: 'Go_to_U00938', url: 'https://github.com/u00938'}
