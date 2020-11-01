@@ -3,9 +3,6 @@ layout: post
 title:  "201026_TIL"
 categories: [Today_I_Learned]
 type: "Today_I_Learned"
-blog: true
-text: true
-post-header: true
 order: 1
 customexcerpt: "2020-10-26 DAY1: JavaScript 변수, 타입, 함수 "
 ---
