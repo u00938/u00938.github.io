@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: home
 title: "U0"
 main: true
+
 ---
 <div class="intro-animation">
 <section class="explanation">
