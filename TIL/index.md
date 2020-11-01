@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "TIL"
-description: Today I Learned: 
 main: true
+header: true
 ---
 
 <ul class="catalogue">
