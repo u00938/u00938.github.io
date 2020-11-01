@@ -1,6 +1,6 @@
 pages:
 #   - {name: 'TIL', url: 'about.html'}
-   - {name: 'Home'}
+   - {name: 'Home', url: 'home.html'}
    - {name: 'TIL', url: 'archive.html'}
    - {name: 'CSS'}
 #   - {name: 'Go_to_U00938', url: 'https://github.com/u00938'}
