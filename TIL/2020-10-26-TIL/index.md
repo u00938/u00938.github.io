@@ -4,6 +4,7 @@ title:  "201026_TIL"
 categories: [Today_I_Learned]
 type: "Today_I_Learned"
 order: 1
+main: true
 customexcerpt: "2020-10-26 DAY1: JavaScript 변수, 타입, 함수 "
 ---
 
