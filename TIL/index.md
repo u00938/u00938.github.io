@@ -3,7 +3,6 @@ layout: default
 title: "TIL"
 description: Today I Learned: 
 main: true
-project-header: true
 ---
 
 <ul class="catalogue">
