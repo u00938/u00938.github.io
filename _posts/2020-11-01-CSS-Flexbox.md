@@ -15,18 +15,21 @@ customexcerpt: "CSS: flexbox "
  1. 컨테이너 박스
  2. 박스 내의 각각의 아이템
  
-![박스와 아이템](/assets/img/flex__1.jpg)
+![박스와 아이템](/assets/img/flex1_.jpg)
  
  
  **main axis 파악하기** 
  - flexbox를 제대로 사용하기 위해선 중심축(main axis)과 반대축(cross axis)를 먼저 알아야 한다.
  
- ![main axis / cross axis](/assets/img/flex_2.jpg)
+ ![main axis / cross axis](/assets/img/flex2_.jpg)
   
 
 ## 컨테이너 박스의 Flexbox 속성
- - 여기 6개의 박스가 있다. div 태그로 만들어진 박스들은 block level로, 한 줄에 한 상자만 들어갈 수 있다.
- ![컨테이너1](/assets/img/flex_3.png)
+ - 여기 4개의 박스가 있다. div 태그로 만들어진 박스들은 block level로, 한 줄에 한 상자만 들어갈 수 있다.
+ - div 박스들은 컨테이너의 너비 한 줄을 다 차지하게 되지만, 여기선 item 클래스의 아이템들의 속성을 너비 40px, 높이 40px로 수정했다고 가정한다.
+ 
+ ![컨테이너1](/assets/img/flex3_.jpg)
+ 
  - column으로 배열되어 있으므로, 이 컨테이너의 main axis: column 으로 분석할 수 있다.
  - 그렇지만 컨테이너를 행으로 배열하고 싶다면 어떻게 해야할까? 이 때 flexbox를 이용하는 것이다.
  - flexbox를 적용하기 위해서는 display를 flex로 지정해줘야 한다.
