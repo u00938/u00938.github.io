@@ -56,7 +56,11 @@ customexcerpt: "CSS: flexbox "
  - 중심축(main axis)을 기준으로 아이템들을 어떻게 배치할 것인지 결정할 때는 justify-content의 속성값들을 이용한다.
  - 속성값: flex-start(기본값: 왼->오 / 위->아래); flex-end(순서 유지); center; space-around; space-evenly; space-between;
  
- ![justify-content](/assets/img/flex_7.png)
+ ![justify-content](/assets/img/flex7_.jpg)
+ 
+ - space-around: item들이 각자 양 옆에 자신만의 space를 동일하게 가지고, 서로의 space를 더한 만큼 떨어진다. 끝의 item은 자신의 space만큼만 떨어지도록 배치된다.
+ - space-between: 첫번째 item은 start-line부터 시작하고, 마지막 item이 end-line에 맞춰지도록 균등 분배된다.
+ - space-evenly: 모든 공간이 균일하도록 배치된다.
  
 ## align-items ##
  - 반대축(cross axis)을 기준으로 아이템들을 어떻게 배치할 것인지 결정할 때는 align-items의 속성값들을 이용한다.
