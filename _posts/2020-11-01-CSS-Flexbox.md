@@ -62,6 +62,17 @@ customexcerpt: "CSS: flexbox "
  - space-between: 첫번째 item은 start-line부터 시작하고, 마지막 item이 end-line에 맞춰지도록 균등 분배된다.
  - space-evenly: 모든 공간이 균일하도록 배치된다.
  
+ 
 ## align-items ##
  - 반대축(cross axis)을 기준으로 아이템들을 어떻게 배치할 것인지 결정할 때는 align-items의 속성값들을 이용한다.
- 추후 업데이트 . . .
+ - 기본값은 stretch로, 컨테이너의 너비 혹은 높이를 다 채운다.(이 경우 row로 정렬되어 있으므로 높이를 다 채운다.)
+ - 속성값: stretch(기본값); flex-start; flex-end; center; baseline
+ 
+ ![align-items](/assets/img/flex8_.jpg) 
+ - baseline: item들을 text 기준선에 맞춰 정렬한다.
+ 
+
+## align-content ##
+- item들이 container 내에서 multi-line일 경우, line 간의 cross axis 기준에서의 간격을 결정할 때는 align-content의 속성을 이용한다. (교차축 정렬)
+- justify-content의 속성값들을 사용할 수 있다.
+- 추후 업데이트 . . . 
