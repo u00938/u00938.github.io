@@ -32,23 +32,25 @@ customexcerpt: "CSS: flexbox "
  
  - column으로 배열되어 있으므로, 이 컨테이너의 main axis: column 으로 분석할 수 있다.
  - 그렇지만 컨테이너를 행으로 배열하고 싶다면 어떻게 해야할까? 이 때 flexbox를 이용하는 것이다.
- - flexbox를 적용하기 위해서는 display를 flex로 지정해줘야 한다.
+ - flexbox를 적용하기 위해서는 컨테이너의 display를 flex로 지정해줘야 한다.
  
- ![display: flex;](/assets/img/flex_4.png)
- - flexbox가 적용되자 축이 바뀐 것을 볼 수 있다.
+ ![display: flex;](/assets/img/flex4_.jpg)
+ - flexbox가 적용되자 축이 row로 바뀐 것을 볼 수 있다.
 
 
 ## flex-direction ##
- - 박스의 방향을 변경해보자. 
- - 속성값: row(기본값); row-reverse(순서바뀜); column; column-reverse;
+ - 박스의 방향을 변경해보자. reverse는 순서도 바뀐다.
+ - flex-direction: row;
+ - 속성값: row(기본값); row-reverse; column; column-reverse;
  
- ![flex-direction](/assets/img/flex_5.png)
+ ![flex-direction](/assets/img/flex5_.jpg)
  
 ## flex-wrap ##
  - 기본적으로 아이템들의 갯수에 상관 없이 모두 한 줄에 들어가게 되지만, 속성을 바꿔서 한 줄이 차면 다음줄로 줄바꿈 되도록 할 수 있다.
+ - flex-wrap: nowrap;
  - 속성값: nowrap(기본값); wrap; wrap-reverse;
  
- ![flex-wrap](/assets/img/flex_6.png)
+ ![flex-wrap](/assets/img/flex6_.jpg)
 
 ## justify-content ##
  - 중심축(main axis)을 기준으로 아이템들을 어떻게 배치할 것인지 결정할 때는 justify-content의 속성값들을 이용한다.
