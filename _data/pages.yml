@@ -2,6 +2,6 @@ pages:
 #   - {name: 'TIL', url: 'about.html'}
 #  - {name: 'Home', url: 'u00938.github.io'}
    - {name: 'Study With Me', url: 'archive.html'}
-   - {name: "CSS", url: /categories/CSS/}
+   - {name: "CSS", url: 'categories/CSS'}
 
 #   - {name: 'Go_to_U00938', url: 'https://github.com/u00938'}
