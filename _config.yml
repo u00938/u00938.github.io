@@ -40,11 +40,6 @@ webmaster_verifications:
   baidu: 
 lang: en_US
 
-comments:
-  provider               : "disqus" # 블로그 댓글 기능 false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
-    shortname            : "u00938-github-io" # 블로그 댓글 기능 https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-
 
 #Highlighter
 kramdown:
