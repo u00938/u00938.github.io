@@ -1,6 +1,6 @@
 ---
 title: "CSS"
-permalink: /categories/CSS/
+permalink: /categories/css
 layout: category
 author_profile: true
 toc_sticky: true
