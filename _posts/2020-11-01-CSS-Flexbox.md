@@ -4,6 +4,7 @@ layout: post
 categories: [CSS]
 description: ""
 customexcerpt: "CSS: flexbox "
+comments: true
 ---
 
 * hello
