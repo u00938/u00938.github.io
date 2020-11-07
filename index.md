@@ -9,9 +9,10 @@ main: true
     <h1 class="intro">
     Keep studying
     </h1>
-<img src="/assets/img/study.jpeg">
+
     
     
 </section>
+<img src="/assets/img/study.jpeg">
 </div>
 
