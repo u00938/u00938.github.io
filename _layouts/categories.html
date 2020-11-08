@@ -15,7 +15,7 @@ title: Categories
     <ul>
     {% for post in site.categories[category_name] %}
       <li><a class="archive-link" href="{{ post.url | relative_url}}">{{post.title}}</a></li>
-      <a href="{{ content.absolute_url }}#disqus_thread">Post a comment</a>
+      <a href="{{ post.url }}#disqus_thread">Post a comment</a>
     {% endfor %}
       <script id="dsq-count-scr" src="//https-u00938-github-io.disqus.com/count.js" async></script>
     </ul>
