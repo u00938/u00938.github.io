@@ -26,6 +26,7 @@ comments: true
   
 
 ## 컨테이너 박스의 Flexbox 속성
+ - 컨테이너, 즉 parent의 flexbox 속성값에 대해 알아보자.
  - 여기 4개의 박스가 있다. div 태그로 만들어진 박스들은 block level로, 한 줄에 한 상자만 들어갈 수 있다.
  - div 박스들은 컨테이너의 너비 한 줄을 다 차지하게 되지만, 여기선 item 클래스의 아이템들의 속성을 너비 40px, 높이 40px로 수정했다고 가정한다.
  
@@ -55,6 +56,7 @@ comments: true
 
 ## justify-content ##
  - 중심축(main axis)을 기준으로 아이템들을 어떻게 배치할 것인지 결정할 때는 justify-content의 속성값들을 이용한다.
+ - justify-content: flex-start;
  - 속성값: flex-start(기본값: 왼->오 / 위->아래); flex-end(순서 유지); center; space-around; space-evenly; space-between;
  
  ![justify-content](/assets/img/flex7_.jpg)
@@ -66,8 +68,9 @@ comments: true
  
 ## align-items ##
  - 반대축(cross axis)을 기준으로 아이템들을 어떻게 배치할 것인지 결정할 때는 align-items의 속성값들을 이용한다.
- - 기본값은 stretch로, 컨테이너의 너비 혹은 높이를 다 채운다.(이 경우 row로 정렬되어 있으므로 높이를 다 채운다.)
- - 속성값: stretch(기본값); flex-start; flex-end; center; baseline
+ - 기본값은 stretch로, 아이템의 content 크기와는 상관 없이 컨테이너의 너비 혹은 높이를 다 채운다.(이 경우 cross axis가 column이므로 높이를 다 채운다.)
+ - align-items: stretch;
+ - 속성값: stretch(기본값); flex-start; flex-end; center; baseline;
  
  ![align-items](/assets/img/flex8_.jpg) 
  - baseline: item들을 text 기준선에 맞춰 정렬한다.
@@ -75,5 +78,16 @@ comments: true
 
 ## align-content ##
 - item들이 container 내에서 multi-line일 경우, line 간의 cross axis 기준에서의 간격을 결정할 때는 align-content의 속성을 이용한다. (교차축 정렬)
-- justify-content의 속성값들을 사용할 수 있다.
-- 추후 업데이트 . . . 
+- justify-content의 속성값들을 그대로 사용할 수 있고, single line일 경우 의미가 없다.
+- align-content: normal;
+- 속성값: normal(기본값); flex-start; flex-end; center; space-around; space-between;
+
+![align-content](/assets/img/flex9_.jpg)
+
+
+## 아이템의 Flexbox 속성 
+- 이제부터 아이템(child)의 속성값에 대해 다뤄본다.
+
+## order ##
+
+
