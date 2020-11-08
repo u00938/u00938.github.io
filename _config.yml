@@ -58,3 +58,6 @@ kramdown:
 sass:
   style: compressed
   sourcemap: never
+  
+  # Disqus
+discus-identifier: u00938-github-io # add your discus identifier
