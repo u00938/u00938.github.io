@@ -36,4 +36,5 @@ related-posts:
 #Disqus
 disqus:
   active: true
+  title: "LEAVE A COMMENT"
   disqus_shortname: "u00938-github-io" #Your disqus shortname. Leave blank to deactivate disqus comments
