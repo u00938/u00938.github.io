@@ -30,11 +30,14 @@
     {% if site.data.settings.related-posts.active %}
       {% include related-posts.html %}
     {% endif %}
-
-    {% if site.data.settings.disqus.disqus_shortname %}
-      {% include disqus.html %}
+    
+    {% if page.comments %}
+      <div id="post-disqus" class="container">
+        {% include disqus.html %}
+      </div>
     {% endif %}
-  </div>
+
+
 
 {%- include footer.html -%}
 
