@@ -92,9 +92,31 @@ comments: true
 - 아이템 각각의 순서(order)를 정해줄 수 있다. 
 - 모든 아이템의 기본값은 0이며, 숫자가 클수록 순서가 뒤로 밀린다. 
 - 음수값도 사용 가능하기 때문에, order를 지정하지 않은 아이템(순서 기본값 0)보다 앞으로 배치할 수 있다.
+- order: 0;
 
 ![order](/assets/img/flex10_.jpg)
 
 
 ## flex-grow ##
+- 컨테이너가 커질 때 아이템이 컨테이너 공간을 차지할 비율을 결정한다.
+- 기본값은 0으로, flex-grow를 설정하지 않을 시 아이템들은 컨테이너의 크기에 상관없이 자신의 고유 크기를 유지한다.
+- 음수값은 허용되지 않는다.
+- 아이템2의 flex-grow: 2;
+
+![flex-grow](/assets/img/flex11_.gif)
+
+
+## flex-shrink ##
+- flex-shrink는 item의 width나 height에 영향을 받는다.
+- 컨테이너가 작아진 만큼 지정한 flex-shrink 비율에 따라 아이템의 크기가 줄어든다.
+- 계산이 까다로워 혼동이 있을 수 있으므로 가능한 사용하지 않는 것이 좋다.
+
+
+## flex-basis ##
+- 아이템들이 컨테이너 공간을 얼마나 차지해야 하는지 명시한다.(아이템의 기본 너비 설정)
+- 기본값은 auto로, content를 제외한 여분의 공간이 flex-grow나 flex-shrink에 지정된 값에 맞춰 변형된다.
+- 속성은 auto나 content와 같은 키워드이거나 px, em 등의 단위 값으로 지정할 수도 있다.
+- flex-basis가 0일 경우 content 주위의 여분의 공간은 고려되지 않는다.
+
+![flex-basis](/assets/img/flex12_.jpg)
 
