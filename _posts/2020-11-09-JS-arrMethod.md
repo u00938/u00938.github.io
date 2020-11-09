@@ -70,4 +70,56 @@ console.log(onlyFemale); // 결과: [{ name: 'Ron', age: 14 }, { name: 'Hermione
 
 
 ## map: 모든 요소들이 함수에서 리턴된 결과값들로 구성된 새로운 배열 생성
+```js
+const numbers = [2, 4, 6, 8];
+
+const doubleNums = numbers.map(function(element) {
+  return element * 2;
+})
+console.log(doubleNums); // 결과: [4, 8, 12, 16] 
+```
+
+## reduce: 요소가 함수에서 리턴된 결과값에 다음 요소(초기값)를 넣은 누적값을 반환
+- accumulator(acc): 누적값. 콜백 함수의 리턴값을 누적. 초기값은 배열의 첫 번째 요소이거나 따로 지정할 수 있다.(initialValue)
+- currentValue(cur): 현재 처리할 요소
+- currentIndex: 현재 처리하는 요소의 인덱스 값. 초기값을 지정한 경우 0부터, 없을 경우 1부터 시작. 선택사항(optional)
+- initialValue: 초기값. 콜백 함수의 첫 번째 인자로 들어가는 값. 따로 지정하지 않을 경우 배열의 첫 번째 요소가 초기값이 된다. 선택사항(optional)
+- array: reduce()를 호출한 배열. (optional)
+
+1. 초기값(initialValue)을 지정하지 않을 경우
+```js
+const numArr = [1, 2, 3, 4, 5];
+
+const sum = numArr.reduce(function(acc, cur) {
+    return acc + cur
+});
+console.log(sum) // 결과(모든 요소의 합): 15
+```
+callback | accumulator | currentValue | currentIndex | array | 반환값
+---- | ---- | ---- | ---- | ---- | ----
+1st 호출 | 1 | 2 | 1 | [1, 2, 3, 4, 5] | 3
+2nd 호출 | 3 | 3 | 2 | [1, 2, 3, 4, 5] | 6
+3rd 호출 | 6 | 4 | 3 | [1, 2, 3, 4, 5] | 10
+4th 호출 | 10 | 5 | 4 | [1, 2, 3, 4, 5] | 15
+
+2. 초기값(initialValue)을 지정할 경우
+```js
+const numArr = [1, 2, 3, 4, 5];
+
+const sum = numArr.reduce(function(acc, cur) {
+    return acc + cur
+}, 10);
+console.log(sum) // 결과(모든 요소의 합): 25
+```
+callback | accumulator | currentValue | currentIndex | array | 반환값
+---- | ---- | ---- | ---- | ---- | ----
+1st 호출 | 10 | 1 | 0 | [1, 2, 3, 4, 5] | 11
+2nd 호출 | 11 | 2 | 1 | [1, 2, 3, 4, 5] | 13
+3rd 호출 | 13 | 3 | 2 | [1, 2, 3, 4, 5] | 16
+4th 호출 | 16 | 4 | 3 | [1, 2, 3, 4, 5] | 20
+4th 호출 | 20 | 5 | 4 | [1, 2, 3, 4, 5] | 25
+
+
+## sort: 배열의 요소를 정렬한 배열을 반환
 - 추후 업데이트 . . .
+
