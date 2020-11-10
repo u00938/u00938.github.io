@@ -1,5 +1,5 @@
 ---
-title: JavaScript 배열 내장 고차함수 - forEach, find, filter, map, reduce, sort
+title: JavaScript 배열 메소드 - forEach, find, filter, map, reduce, sort
 layout: post
 categories: [JavaScript]
 description: ""
