@@ -3,7 +3,7 @@ title: JavaScript 배열 내장 고차함수
 layout: post
 categories: [JavaScript]
 description: ""
-customexcerpt: "JavaScript: array method "
+customexcerpt: "JavaScript: forEach, find, filter, map, reduce, sort"
 comments: true
 ---
 
@@ -25,9 +25,9 @@ comments: true
 const fruits = ['apple', 'banana', 'mango'];
 
 // 사용법1: 기본(호출)
-// element는 배열의 요소
-const getEach = function(element) {
-  console.log(element);
+// function의 매개변수는 배열의 인자
+const getEach = function(fruit) {
+  console.log(fruit);
 }
 fruits.forEach(getEach) // 결과: 'apple', 'banana', 'mango'
 
@@ -48,8 +48,8 @@ const students = [
   { name: 'Hermione', age: 14 },
 ];
 
-const findRon = students.find(function(element) {
-  return element.name === 'Ron';
+const findRon = students.find(function(student) {
+  return student.name === 'Ron';
 })
 console.log(findRon); // 결과: {name: "Ron", age: 14}
 ```
@@ -64,10 +64,10 @@ const students = [
   { name: 'Hermione', age: 14 },
 ];
 
-const onlyFourteen = students.filter(function(element) {
-  return element.age === 14; // 조건
+const onlyFourteen = students.filter(function(student) {
+  return student.age === 14; // 조건
 })
-console.log(onlyFemale); // 결과: [{ name: 'Ron', age: 14 }, { name: 'Hermione', age: 14 }]
+console.log(onlyFourteen); // 결과: [{ name: 'Ron', age: 14 }, { name: 'Hermione', age: 14 }]
 ```
 
 
@@ -76,8 +76,8 @@ console.log(onlyFemale); // 결과: [{ name: 'Ron', age: 14 }, { name: 'Hermione
 ```js
 const numbers = [2, 4, 6, 8];
 
-const doubleNums = numbers.map(function(element) {
-  return element * 2;
+const doubleNums = numbers.map(function(num) {
+  return num * 2;
 })
 console.log(doubleNums); // 결과: [4, 8, 12, 16] 
 ```
@@ -129,6 +129,26 @@ callback | accumulator | currentValue | currentIndex | array | 반환값
 5th 호출 | 20 | 5 | 4 | [1, 2, 3, 4, 5] | 25
 
 
-## sort: 배열의 요소를 정렬한 배열을 반환
-- 추후 업데이트 . . .
+## every: 배열 안의 모든 요소가 함수 조건을 만족하는지 boolean 반환
+- 빈 배열에서 호출 시 무조건 true를 반환
 
+```js
+const everyNum = [12, 50, 3, 26, 130];
+
+const iseveryNumTrue = everyNum.every(function(num) {
+  return num > 10;
+});
+console.log(iseveryNumTrue); // 결과: false
+```
+
+
+## some: 배열 안의 요소 중 하나라도 함수 조건을 만족하는지 boolean 반환
+
+```js
+const everyNum = [12, 50, 3, 26, 130];
+
+const isAnyNumTrue = everyNum.some(function(num) {
+  return num > 10;
+});
+console.log(isAnyNumTrue); // 결과: true
+```
