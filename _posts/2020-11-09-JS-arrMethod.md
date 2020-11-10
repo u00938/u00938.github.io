@@ -1,9 +1,9 @@
 ---
-title: JavaScript 배열 메소드 - forEach, find, filter, map, reduce, sort
+title: JavaScript 배열 메소드 - forEach, find, filter, map, reduce, every, some
 layout: post
 categories: [JavaScript]
 description: ""
-customexcerpt: "JavaScript: forEach, find, filter, map, reduce, sort"
+customexcerpt: "JavaScript: forEach, find, filter, map, reduce, every, some "
 comments: true
 ---
 
