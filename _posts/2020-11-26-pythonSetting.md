@@ -147,5 +147,68 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 <br>
 
 ## pip 설치하기 ##
+- 파이썬으로 작성된 다양한 라이브러리 패키지를 이용할 수 있다.
 - pip(package installer) : 패키지 관리자
+- 현재 python3을 사용하고 있으므로, pip3를 설치할 것이다.
 
+```
+~$ sudo apt install python3-pip
+```
+<br>
+
+- pip 버전을 확인해보자
+
+```
+~$ pip3 -V
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+```
+
+<br>
+
+- pip를 최신 버전으로 업그레이드
+
+```
+~$ pip3 install --upgrade pip
+```
+
+<br>
+
+- 현재 설치되어있는 패키지 내용을 볼 수 있다.
+
+```
+~$ pip3 list
+Package                Version             
+---------------------- --------------------
+apturl                 0.5.2               
+bcrypt                 3.1.7               
+blinker                1.4                 
+Brlapi                 0.7.0               
+certifi                2019.11.28          
+chardet                3.0.4               
+...
+
+```
+
+<br>
+
+- 패키지 정보 확인하는 명령 `pip3 show 패키지이름`
+
+```
+~$ pip3 show apturl
+Name: apturl
+Version: 0.5.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Location: /usr/lib/python3/dist-packages
+Requires: 
+Required-by: 
+```
+
+<br>
+
+- 패키지 설치 `pip3 install 패키지이름`
+- 패키지 업그레이드 명령 `pip3 install --upgrade 패키지이름`
+- 패키지 삭제 명령 `pip3 uninstall 패키지이름`
