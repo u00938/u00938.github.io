@@ -45,9 +45,9 @@ comments: true
  - 박스의 방향을 변경해보자. reverse는 순서도 바뀐다.
  - flex-direction: row;
  
- 
- `flex-direction: row(기본값); || row-reverse; || column; || column-reverse;`
- 
+ ```
+ flex-direction: row(기본값); || row-reverse; || column; || column-reverse;
+ ```
  
  ![flex-direction](/assets/img/flex5_.jpg)
  
@@ -55,7 +55,9 @@ comments: true
  - 기본적으로 아이템들의 갯수에 상관 없이 모두 한 줄에 들어가게 되지만, 속성을 바꿔서 한 줄이 차면 다음줄로 줄바꿈 되도록 할 수 있다.
  - flex-wrap: nowrap;
  
- `flex-wrap: nowrap(기본값); || wrap; || wrap-reverse;`
+ ```
+ flex-wrap: nowrap(기본값); || wrap; || wrap-reverse;
+ ```
  
  ![flex-wrap](/assets/img/flex6_.jpg)
  
@@ -70,7 +72,9 @@ comments: true
  - 중심축(main axis)을 기준으로 아이템들을 어떻게 배치할 것인지 결정할 때는 justify-content의 속성값들을 이용한다.
  - justify-content: flex-start;
  
- `justify-content : flex-start(기본값: 왼->오 / 위->아래); || flex-end(순서 유지); || center; || space-between; || space-around; || space-evenly;`
+ ```
+ justify-content : flex-start(기본값: 왼->오 / 위->아래); || flex-end(순서 유지); || center; || space-between; || space-around; || space-evenly;
+ ```
  
  ![justify-content](/assets/img/flex7_.jpg)
  
@@ -84,7 +88,9 @@ comments: true
  - 기본값은 stretch로, 아이템의 content 크기와는 상관 없이 컨테이너의 너비 혹은 높이를 다 채운다.(이 경우 cross axis가 column이므로 높이를 다 채운다.)
  - align-items: stretch;
  
- `align-items: stretch(기본값) || flex-start || flex-end || center; || baseline;`
+ ```
+ align-items: stretch(기본값) || flex-start || flex-end || center; || baseline;
+ ```
  
  ![align-items](/assets/img/flex8_.jpg) 
  - baseline: item들을 text 기준선에 맞춰 정렬한다.
@@ -95,7 +101,9 @@ comments: true
 - justify-content의 속성값들을 그대로 사용할 수 있고, single line일 경우 의미가 없다.
 - align-content: normal;
 
-`align-content : normal(기본값); || flex-start; || flex-end; || center; || space-around; || space-between;`
+```
+align-content : normal(기본값); || flex-start; || flex-end; || center; || space-around; || space-between;
+```
 
 ![align-content](/assets/img/flex9_.jpg)
 
@@ -149,7 +157,9 @@ comments: true
 - align-items는 모든 아이템의 정렬을 cross axis 기준으로 변경하지만 일부 아이템을 align-self로 따로 정렬할 수 있다.
 - align-self는 align-items 사용 후에 오버라이딩(overriding)해서 사용할 수 있다. 즉, align-items 속성보다 우선시된다.
 
-`align-self : auto || flex-start; || flex-end; || center; || baseline; || stretch;`
+```
+align-self : auto || flex-start; || flex-end; || center; || baseline; || stretch;
+```
 
 ![align-self](/assets/img/flex13_.jpg)
 
