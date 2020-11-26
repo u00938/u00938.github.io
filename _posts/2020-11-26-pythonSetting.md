@@ -120,23 +120,23 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 <br>
 
 2. 파이썬 익스텐션을 다운받는다.
- ![VSC](/assets/img/p2.png)
+![VSC](/assets/img/p2.png)
 <br>
 
 3. 코드를 실행시키기 위해 Run(벌레모양) -> Run and Debug(혹은 Debug with Python) -> Python file 
- ![VSC](/assets/img/p3.png)
- ![VSC](/assets/img/p4.png)
+![VSC](/assets/img/p3.png)
+![VSC](/assets/img/p4.png)
 
- - "Select Python Interpreter" 창이 뜨면 클릭해서 설치해준다. (설치한 python 버전을 선택해주면 된다)
+ - `Select Python Interpreter` 창이 뜨면 클릭해서 설치해준다. (설치한 python 버전을 선택해주면 된다)
 
 <br>
 
 4. 매번 이 과정으로 코드를 실행시킬 순 없으므로 좀 더 간편하게 하기 위해 json파일을 설치한다. 
 
- - "create a launch.json file"을 클릭하면 json 파일이 생성된다. 
+ - `create a launch.json file`을 클릭하면 json 파일이 생성된다. 
 
- ![VSC](/assets/img/p5.png)
- ![VSC](/assets/img/p6.png)
+![VSC](/assets/img/p5.png)
+![VSC](/assets/img/p6.png)
 
 <br>
 
@@ -145,7 +145,7 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
  - 코드를 실행시키기 전 저장하는 것을 잊지 말자! (CTRL + S)
  - 코드를 실행하는 방법은 4가지가 있다.
 
- ![VSC](/assets/img/p7.png)
+![VSC](/assets/img/p7.png)
 
 <br>
 
