@@ -148,7 +148,7 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 
 <br>
 
-- 마지막 방법이 제일 간편하다. ^^! 버튼 하나만 누르면 끝!
+ - 마지막 방법이 제일 간편하다. ^^! 버튼 하나만 누르면 끝!
 
 ![VSC](/assets/img/p8.png)
 
