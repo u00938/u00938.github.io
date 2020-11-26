@@ -140,6 +140,7 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 <br>
 
 5. 코드를 실행시키는 방법 
+
  - 코드를 실행시키기 전 저장하는 것을 잊지 말자! (CTRL + S)
  - 코드를 실행하는 방법은 4가지가 있다.
 ![VSC](/assets/img/p7.png)
