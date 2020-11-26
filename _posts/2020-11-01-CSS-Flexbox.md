@@ -46,7 +46,7 @@ comments: true
  - flex-direction: row;
  
  
- `flex-direction: row(기본값) || row-reverse || column || column-reverse
+ `flex-direction: row(기본값) || row-reverse || column || column-reverse`
  
  
  ![flex-direction](/assets/img/flex5_.jpg)
