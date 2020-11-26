@@ -54,6 +54,7 @@ Python 3.8.5
 
 - `ls -al` 명령어로 이 위치의 파일이 어떤 파일을 가리키는지 확인해본다.
 - 현재 python2를 사용 중인 것으로 확인되었다. 이제 이것을 python3로 바꿔줄 것이다.
+
 ```
 ~$ ls -al /usr/bin/python
 lrwxrwxrwx 1 root root 7  4월 15  2020 /usr/bin/python -> python2
