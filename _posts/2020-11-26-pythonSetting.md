@@ -15,15 +15,18 @@ comments: true
 ![VSC](/assets/img/vsc.png)
 - 코드 에디터 [Visual Studio Code](https://code.visualstudio.com/)
 - 우리는 우분투를 쓰기 때문에 .deb 파일을 다운로드 한다.
+
 <br>
+
 - 다운 받은 파일 확인하기! 직접 다운로드 폴더를 열거나, 터미널의 ls 명령으로 확인할 수 있다.
 ![deb](/assets/img/vsc2.png)
 <br>
+
 - 터미널에서 다운받기!(deb파일의 버전을 그대로 입력한다)
 <br>
 
 {% highlight markdown %}
-sudo apt install ./code_1.51.1-1605051630_amd64 .deb
+`sudo apt install ./code_1.51.1-1605051630_amd64 .deb`
 {% endhighlight %}
 
 <br>
