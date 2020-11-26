@@ -44,7 +44,10 @@ comments: true
 ## flex-direction ##
  - 박스의 방향을 변경해보자. reverse는 순서도 바뀐다.
  - flex-direction: row;
+ 
+ ```
  - flex-direction: row(기본값); || row-reverse; || column; || column-reverse;
+ ```
  
  ![flex-direction](/assets/img/flex5_.jpg)
  
