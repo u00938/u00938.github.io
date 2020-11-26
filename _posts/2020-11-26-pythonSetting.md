@@ -13,17 +13,20 @@ comments: true
 
 ## Visual Studio Code ##
 ![VSC](/assets/img/vsc.png)
-<br>
 - 코드 에디터 [Visual Studio Code](https://code.visualstudio.com/)
 - 우리는 우분투를 쓰기 때문에 .deb 파일을 다운로드 한다.
+<br>
 - 다운 받은 파일 확인하기! 직접 다운로드 폴더를 열거나, 터미널의 ls 명령으로 확인할 수 있다.
 ![deb](/assets/img/vsc2.png)
 <br>
 - 터미널에서 다운받기!(deb파일의 버전을 그대로 입력한다)
 <br>
 
-`sudo apt install ./code_1.51.1-1605051630_amd64 .deb`
+{% highlight markdown %}
+sudo apt install ./code_1.51.1-1605051630_amd64 .deb
+{% endhighlight %}
 
+<br>
 
 ## python 환경설정 ##
 1. 새 폴더에 파일을 만든다. .py로 파이썬 파일을 만들 수 있다.
