@@ -31,7 +31,7 @@ sudo apt install ./code_1.51.1-1605051630_amd64 .deb
 
 <br>
 
-**파이썬 버전 확인 후 업데이트하기**
+## 파이썬 버전 확인 후 업데이트하기 ##
 
 ```
 ~$ python2 -V
@@ -49,12 +49,18 @@ Python 3.8.5
 ~$ which python
 /usr/bin/python
 ```
+
+<br>
+
 - `ls -al` 명령어로 이 위치의 파일이 어떤 파일을 가리키는지 확인해본다.
 - 현재 python2를 사용 중인 것으로 확인되었다. 이제 이것을 python3로 바꿔줄 것이다.
 ```
 ~$ ls -al /usr/bin/python
 lrwxrwxrwx 1 root root 7  4월 15  2020 /usr/bin/python -> python2
 ```
+
+<br>
+
 - `ls` 명령어로 현재 설치된 python 파일들을 확인해본다.
 
 ```
@@ -72,17 +78,27 @@ python3.8-config
 x86_64-linux-gnu-python3-config
 x86_64-linux-gnu-python3.8-config
 ```
-- `update-alternatives --install` 명령어를 통해 실행파일을 등록한다. 맨 끝에 붙인 숫자(1 || 2)는 우선순위
+
+<br>
+
+- `update-alternatives --install` 명령어를 통해 실행파일을 등록한다. 맨 끝에 붙인 숫자(1/2)는 우선순위
 
 ```
 ~$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
 ~$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 2
 ```
 
+<br>
+
 - `update-alternatives --config python` 명령어를 입력하면 등록된 실행파일을 선택할 수 있는 메뉴가 나온다.
 ![python](/assets/img/p10.png)
 
+<br>
+
 - 원하는 메뉴 번호를 입력한다. 나는 python 3.6으로 업그레이드 하는 것이 목적이기 때문에 2 입력!
+
+<br>
+
 - 현재 사용중인 파일을 확인해본다.
 
 ```
@@ -93,7 +109,8 @@ lrwxrwxrwx 1 root root 24 11월 26 18:56 /usr/bin/python -> /etc/alternatives/py
 ~$ ls -al /etc/alternatives/python
 lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/python3.8
 ```
-<
+
+<br>
 
 
 ## python 환경설정 ##
