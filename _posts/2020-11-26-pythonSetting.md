@@ -26,7 +26,7 @@ comments: true
 <br>
 
 {% highlight markdown %}
-`sudo apt install ./code_1.51.1-1605051630_amd64 .deb`
+sudo apt install ./code_1.51.1-1605051630_amd64 .deb
 {% endhighlight %}
 
 <br>
