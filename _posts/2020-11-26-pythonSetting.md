@@ -132,25 +132,20 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 <br>
 
 4. 매번 이 과정으로 코드를 실행시킬 순 없으므로 좀 더 간편하게 하기 위해 json파일을 설치한다. 
-
- - `create a launch.json file`을 클릭하면 json 파일이 생성된다. 
-
+- `create a launch.json file`을 클릭하면 json 파일이 생성된다. 
 ![VSC](/assets/img/p5.png)
 ![VSC](/assets/img/p6.png)
 
 <br>
 
 5. 코드를 실행시키는 방법 
-
- - 코드를 실행시키기 전 저장하는 것을 잊지 말자! (CTRL + S)
- - 코드를 실행하는 방법은 4가지가 있다.
-
+- 코드를 실행시키기 전 저장하는 것을 잊지 말자! (CTRL + S)
+- 코드를 실행하는 방법은 4가지가 있다.
 ![VSC](/assets/img/p7.png)
 
 <br>
 
- - 마지막 방법이 제일 간편하다. ^^! 버튼 하나만 누르면 끝!
-
+- 마지막 방법이 제일 간편하다. ^^! 버튼 하나만 누르면 끝!
 ![VSC](/assets/img/p8.png)
 
 <br>
