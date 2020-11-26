@@ -25,9 +25,9 @@ comments: true
 - 터미널에서 다운받기!(deb파일의 버전을 그대로 입력한다)
 <br>
 
-{% highlight markdown %}
-sudo apt install ./code_1.51.1-1605051630_amd64 .deb
-{% endhighlight %}
+```
+~$ sudo apt install ./code_1.51.1-1605051630_amd64 .deb
+```
 
 <br>
 
