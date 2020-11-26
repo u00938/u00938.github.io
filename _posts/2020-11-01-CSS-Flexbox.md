@@ -66,7 +66,7 @@ comments: true
  
  <br>
  
-## 방향 & 줄바꿈: flex-flow ##
+## 방향 & 줄바꿈 단축: flex-flow ##
  - flex-direction, flex-wrap이 순서대로 결합된 단축 속성이다. 각 속성은 띄어쓰기로 구분한다.
  - 기본값은 row nowrap 
  - 예제) flex-flow: column wrap;
@@ -160,7 +160,7 @@ align-content : normal(기본값); || flex-start; || flex-end; || center; || spa
 
 <br>
 
-## 비율 & 크기: flex ##
+## 비율 & 크기 단축: flex ##
 - flex-grow, flex-shrink, flex-basis 순서대로 결합된 단축 속성이다. 각 속성은 띄어쓰기로 분할한다.
 - flex-grow를 제외한 shrink와 basis는 생략할 수 있다.
 - flex: 1; === flex-grow: 1;
