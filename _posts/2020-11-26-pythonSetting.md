@@ -156,7 +156,7 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 
 ## pip 설치하기 ##
 - 파이썬으로 작성된 다양한 라이브러리 패키지를 이용할 수 있다.
-- pip(package installer) : 패키지 관리자
+- pip(package installer for Python) : 패키지 관리자
 - 현재 python3을 사용하고 있으므로, pip3를 설치할 것이다.
 
 ```
