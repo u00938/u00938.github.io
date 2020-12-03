@@ -106,7 +106,8 @@ stack.pop() // "top1"
  
  <br>
  
- ## JavaScript 객체를 이용한 Stack 메소드 구현 ##
+ ## JavaScript 객체를 이용한 queue 메소드 구현 ##
+ - size(), enqueue(), dequeue()
  
  ```js
  class Queue {
