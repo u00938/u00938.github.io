@@ -19,9 +19,11 @@ comments: true
  <br>
  
  - stack property
+ 
   > top : 가장 최근의 요소의 인덱스(스택의 현재 위치/ 스택의 마지막 요소의 인덱스)
  
  - stack method
+ 
   > push(element) : 스택 끝에 요소를 추가
   
   > pop() : 가장 최근에 추가된 요소를 제거
@@ -79,6 +81,7 @@ stack.size() // 2
 
 stack.pop() // "top1"
 ```
+<br>
 
 ## queue ##
  - First in, First out : 먼저 들어온 것이 먼저 나간다. => 선입선출
@@ -88,16 +91,22 @@ stack.pop() // "top1"
 <br>
 
  - queue property
+ 
  > front : 첫 번째 요소의 위치
  
  > rear : 마지막 요소의 위치
  
  - queue method
+ 
  > enqueue(element) : queue 끝에 요소를 추가
  
  > dequeue() : 맨 앞의 요소를 제거
  
  > size() : 큐의 크기를 반환
+ 
+ <br>
+ 
+ ## JavaScript 객체를 이용한 Stack 메소드 구현 ##
  
  ```js
  class Queue {
