@@ -120,13 +120,13 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 
 ![VSC](/assets/img/p1.png)
  
- <br>
+<br>
 
 2. 파이썬 익스텐션을 다운받는다.
 
 ![VSC](/assets/img/p2.png)
  
- <br>
+<br>
 
 3. 코드를 실행시키기 위해 Run(벌레모양) -> Run and Debug(혹은 Debug with Python) -> Python file 
 
