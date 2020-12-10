@@ -116,19 +116,19 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 
 ## python 환경설정 ##
 
-1.새 폴더에 파일을 만든다. .py로 파이썬 파일을 만들 수 있다.
+1. 새 폴더에 파일을 만든다. .py로 파이썬 파일을 만들 수 있다.
 
 ![VSC](/assets/img/p1.png)
  
  <br>
 
-2.파이썬 익스텐션을 다운받는다.
+2. 파이썬 익스텐션을 다운받는다.
 
 ![VSC](/assets/img/p2.png)
  
  <br>
 
-3.코드를 실행시키기 위해 Run(벌레모양) -> Run and Debug(혹은 Debug with Python) -> Python file 
+3. 코드를 실행시키기 위해 Run(벌레모양) -> Run and Debug(혹은 Debug with Python) -> Python file 
 
 ![VSC](/assets/img/p3.png)
 ![VSC](/assets/img/p4.png)
@@ -138,7 +138,7 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 <br>
 
 
-4.매번 이 과정으로 코드를 실행시킬 순 없으므로 좀 더 간편하게 하기 위해 json파일을 설치한다. 
+4. 매번 이 과정으로 코드를 실행시킬 순 없으므로 좀 더 간편하게 하기 위해 json파일을 설치한다. 
 
 'create a launch.json file'을 클릭하면 json 파일이 생성된다. 
 
@@ -147,7 +147,7 @@ lrwxrwxrwx 1 root root 18 11월 26 18:56 /etc/alternatives/python -> /usr/bin/py
 
 <br>
 
-5.코드를 실행시키는 방법 
+5. 코드를 실행시키는 방법 
 
 코드를 실행시키기 전 저장하는 것을 잊지 말자! (CTRL + S)
 코드를 실행하는 방법은 4가지가 있다.
