@@ -49,7 +49,7 @@ comments: true
  
   - 삭제할 노드의 이전 노드의 next link가 삭제 노드 next 노드와 연결되게 한다.
   - worst case: 삭제하려는 위치를 찾기 위해 처음부터 탐색해야하므로 최악의 경우 O(n)의 시간 복잡도가 든다.
-  - best case: 맨 끝(head/tail)에 추가/삭제할 경우 O(1)
+  - best case: 맨 끝(head/tail)에 삭제할 경우 O(1)
  
 <br>
  
@@ -71,4 +71,115 @@ comments: true
 
 ## Array vs.Linked List ##
 
+ - 배열은 연속적인, 순서가 있는 데이터 구조 / Linked list는 순서 없이 랜덤으로 위치한 노드들이 연결되어있는 데이터 구조
+ - 배열은 인덱스로 원하는 데이터에 접근이 가능 / Linked list는 head부터 모든 노드를 탐색하여 원하는 데이터를 찾아야 한다.
+ - 배열의 탐색 시간 복잡도 O(1) / Linked List 탐색 시간 복잡도 O(n)
+ - 배열에서 요소를 삽입할 경우, 새로운 요소가 추가된 위치의 다음 요소들은 인덱스가 뒤로 1씩 shift되어야 하기 때문에 최악의 경우(인덱스 0번에 추가될 경우) O(n)의 시간 복잡도를 갖는다. / Linked List의 경우 삽입 시 O(1)의 시간 복잡도
+ - 배열에서 요소를 삭제할 경우에도 삭제한 원소의 다음 요소들은 인덱스가 앞으로 1씩 shift되어야 하기 때문에 최악의 경우(인덱스 0번을 삭제할 경우) O(n)의 시간복잡도를 갖는다.
+ - 배열은 고정된 크기를 가지고 있는 반면, Linked list는 동적인 크기를 가진다.
+ - 배열은 데이터 자체를 저장하지만, Linked list는 데이터에 추가로 next(양방향의 경우 previous까지)를 가리키는 referencing element도 같이 저장되어야하기 때문에 메모리가 더 많이 사용된다.
+ 
+<br>
+
+## JS> Linked list 메소드 구현 ##
+
+```js
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this._size = 0;
+  }
+
+  addToTail(value) {
+    const node = new Node(value)
+
+    if (!this.head) {
+      this.head = node;
+      this.tail = node;
+    }
+    else {
+      this.tail.next = node;
+      this.tail = node
+    }
+    this._size ++;
+  }
+
+  remove(value) {
+     const index = this.indexOf(value);
+     
+     if (index === -1) {
+       return;
+     }
+
+     if (index === 0) {
+       if (this.head === this.tail) {
+         this.head = null;
+         this.tail = null;
+         this._size = 0;
+       } else {
+         this.head = this.head.next;
+         this._size -= 1;
+       }
+       return;
+     }
+
+     const prevNode = this.getNodeAt(index - 1);
+     const removedNode = prevNode.next;
+
+     if (removedNode === this.tail) {
+       prevNode.next = null;
+       this.tail = prevNode;
+       this._size -= 1;
+       return;
+     }
+
+     prevNode.next = removedNode.next;
+     this._size -= 1;
+  }
+
+  getNodeAt(index) {
+    let current = this.head
+    let count = 0;
+
+    while (current) {
+      if (count === index) {
+        return current
+      } 
+      count ++
+      current = current.next;
+    }
+    return undefined;
+  }
+
+  contains(value) {
+  return this.indexOf(value) !== -1
+  }
+
+  indexOf(value) {
+    let current = this.head
+    let index = 0;
+
+    while (current) {
+      if (current.value === value) {
+        return index
+      }
+      index ++
+      current = current.next
+    }
+    return -1
+  }
+
+  size() {
+    return this._size
+  }
+}
+```
 
