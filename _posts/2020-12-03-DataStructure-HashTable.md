@@ -35,14 +35,13 @@ comments: true
  - 서로 다른 key가 같은 index를 배정받았을 경우 충돌이 일어난다.
  
  **충돌을 해결하는 방법**
- - Closed Addressing(separate chaining)
+ 1. Closed Addressing(separate chaining)
   - 각 index가 linked list를 가리키고, linked list에 데이터들이 비연속적으로 연결된다.
   - 동일 index를 가지는 데이터 간의 충돌이 일어나면 index가 가리키는 linked list에 데이터 노드를 추가하여 충돌을 해결할 수 있다.
   - linked list만큼의 추가적인 메모리를 사용한다.
  
-<br> 
   
- - Open Addressing
+ 2. Open Addressing
   - 추가적인 메모리 공간의 사용 없이 bucket의 빈 공간을 사용한다.
   - linear probing: 해당 인덱스에 다른 데이터가 이미 저장되어 있으면 bucket에서 고정폭만큼씩 이동하면서 비어있는 bucket을 찾아 데이터를 저장한다. 탐색 시에는 해당 인덱스에 일치하는 key값이 없을 경우 다음 인덱스를 검색해 나가면서 같은 key가 나올때까지, key가 없을 때까지 검색한다.
   - 중간의 데이터가 삭제처리 되었을 시 뒤의 데이터를 이어서 검색하기가 어렵다. 때문에 데이터를 삭제한 후 그 자리에 dummy node를 삽입하여 다음 index까지 검색이 연결되도록 해줘야 한다.
