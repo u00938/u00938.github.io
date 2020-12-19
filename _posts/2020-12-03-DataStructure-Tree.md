@@ -31,7 +31,7 @@ comments: true
  
  <br>
     
- ## 트리의 Time Complextity ##
+## 트리의 Time Complextity ##
   - N 링크 표현법: 하나의 노드는 최대 N개의 자식을 가지며 그 자식 또한 최대 N개의 자식을 가진다.
   - 모든 노드의 총 갯수는 m개
   
@@ -46,7 +46,7 @@ comments: true
  
  <br>
  
- ## JS> Tree 메소드 구현 ##
+## JS> Tree 메소드 구현 ##
  
  ```js
  class TreeNode {
