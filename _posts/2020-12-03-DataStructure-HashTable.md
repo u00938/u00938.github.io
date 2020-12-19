@@ -82,6 +82,7 @@ class HashTable {
     this._bucketNum = 8;
     this._storage = LimitedArray(this._bucketNum);
   }
+  
   insert(key, value) {
     const index = hashFunction(key, this._bucketNum);
     const bucket = this._storage.get(index) || [];
