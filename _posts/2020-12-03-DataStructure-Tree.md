@@ -146,7 +146,7 @@ comments: true
   
  <br>
  
- ## JS> Binary Search Tree 메소드 구현 ##
+## JS> Binary Search Tree 메소드 구현 ##
  
  ```js
  class BinarySearchTreeNode {
