@@ -1,9 +1,9 @@
 ---
-title: <JS> Graph, Tree
+title: <JS> Graph
 layout: post
 categories: [Data_Structure]
 description: ""
-customexcerpt: "JavaScript: Graph, Tree"
+customexcerpt: "JavaScript: Graph"
 comments: true
 ---
 
