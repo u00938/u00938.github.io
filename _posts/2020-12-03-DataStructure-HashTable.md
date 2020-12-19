@@ -26,7 +26,7 @@ comments: true
  
  <br>
  
- ** hash function **
+ **hash function**
  - 항상 bucket의 크기 내의 결과값을 산출해야 한다.
  - 같은 키를 넣었을 때 항상 같은 값이 나와야 한다.
  - 어떠한 저장 없이 값을 주면 값을 내줘야 한다.
@@ -39,6 +39,8 @@ comments: true
   - 각 index가 linked list를 가리키고, linked list에 데이터들이 비연속적으로 연결된다.
   - 동일 index를 가지는 데이터 간의 충돌이 일어나면 index가 가리키는 linked list에 데이터 노드를 추가하여 충돌을 해결할 수 있다.
   - linked list만큼의 추가적인 메모리를 사용한다.
+ 
+<br> 
   
  2. Open Addressing
   - 추가적인 메모리 공간의 사용 없이 bucket의 빈 공간을 사용한다.
@@ -61,4 +63,94 @@ comments: true
  **노드 삭제**
   - key값을 해쉬 코드로 매핑하는 데 O(1), 해당 bucket을 탐색하는 데 최악의 경우 O(α)의 시간이 든다. 탐색 후 삭제 연산은 비교적 작기 때문에 무시 가능하다.
   
+  <br>
+  
+## resizing ##
+- 최선의 시간 복잡도를 유지하기 위해 공간을 효율적으로 사용해야 한다.
+- hash table은 25% ~ 75%가 차있을 때 효과적이다.
+- bucket이 차있는 비율이 75%를 넘어가면 bucket을 2배 늘려준다.
+- bucket이 25%보다 덜 찬 경우 bucket의 사이즈를 반 줄인다.
+
+<br>
+  
 ## JS> Hash Table 메소드 구현 ##
+
+```js
+class HashTable {
+  constructor() {
+    this._size = 0;
+    this._bucketNum = 8;
+    this._storage = LimitedArray(this._bucketNum);
+  }
+  insert(key, value) {
+    const index = hashFunction(key, this._bucketNum);
+    const bucket = this._storage.get(index) || [];
+    for (let i = 0; i < bucket.length; i += 1) {
+      const tuple = bucket[i];
+      if (tuple[0] === key) {
+        const oldValue = tuple[1];
+        tuple[1] = value;
+        return oldValue;
+      }
+    }
+    bucket.push([key, value]);
+    this._storage.set(index, bucket);
+    this._size += 1;
+    if (this._size > this._bucketNum * 0.75) {
+      this._bucketNum *= 2
+      this._resize(this._bucketNum)
+    }
+    return undefined;
+  }
+  
+  retrieve(key) {
+    const index = hashFunction(key, this._bucketNum);
+    const bucket = this._storage.get(index) || [];
+    for (let i = 0; i < bucket.length; i += 1) {
+      const tuple = bucket[i];
+      if (tuple[0] === key) {
+        return tuple[1];
+      }
+    }
+    return undefined;
+  }
+  
+  remove(key) {
+    const index = hashFunction(key, this._bucketNum);
+    const bucket = this._storage.get(index) || [];
+    for (let i = 0; i < bucket.length; i += 1) {
+      const tuple = bucket[i];
+      if (tuple[0] === key) {
+        bucket.splice(i, 1);
+        this._size -= 1;
+        if (this._size < this._bucketNum * 0.25) {
+          this._bucketNum = Math.floor(this._bucketNum * 0.5)
+          this._resize(this._bucketNum);
+        }
+        return tuple[1];
+      }
+    }
+    return undefined;
+  }
+  
+  _resize(newBucketNum) {
+    const oldStorage = this._storage;
+    newBucketNum = Math.max(newBucketNum, 8);
+    if (newBucketNum === this._bucketNum) {
+      return;
+    }
+    this._bucketNum = newBucketNum;
+    this._storage = LimitedArray(this._bucketNum);
+    this._size = 0;
+    oldStorage.each((bucket) => {
+      if (!bucket) {
+        return;
+      }
+      for (let i = 0; i < bucket.length; i += 1) {
+        const tuple = bucket[i];
+        this.insert(tuple[0], tuple[1]);
+      }
+    });
+  }
+}
+```
