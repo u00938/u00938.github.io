@@ -27,6 +27,8 @@ comments: true
     
  - 단순 경로(simple-path): 경로 중 반복되는 정점이 없는, 같은 간선을 두 번 이상 지나가지 않는 경로
  
+ <br>
+ 
 ## Graph 구현 방식 ##
  **1. 인접 리스트(Adjacency List)**
 
@@ -81,6 +83,8 @@ comments: true
     - 인접 행렬 그래프: O(N^2)
 
   - Backtracking: 조건에 유효하지 않으면 배제 후 부모 노드로 되돌아가는 문제 풀이 전략
+
+<br>
 
   **BFS(너비 우선 탐색, Breadth-First Search)**
   - root에서 시작하여 인접한 노드를 먼저 탐색
