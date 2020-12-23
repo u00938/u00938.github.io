@@ -1,5 +1,5 @@
 ---
-title: Browser, Server, APIs, HTTP, Ajax, Fetch
+title: 서버와 통신하기
 layout: post
 categories: [Server]
 description: ""
@@ -83,16 +83,18 @@ comments: true
 ## HTTP ##
  - Hypertext Transfer Protocol: HTML과 같은 문서를 전송하기 위한 프로토콜(규약, 규칙)
  - 클라이언트와 서버가 통신하기 위한 규칙  
- - 요청과 응답으로 이루어진다.
+ - 요청(request)과 응답(response)으로 이루어진다.
     - client: 요청 -> server: 응답 -> client
  <br>
   
  **HTTP요청의 구성**
   - Header + Body
-   - 헤더: 어디서 보내는 요청인지(origin)/ 컨텐츠 타입은 무엇인지/ 어떤 클라이언트를 이용해 보냈는지(user-agent)
+   - 헤더: 요청에 대한 설명이나 메시지 본문에 대한 설명
+     - 어디서 보내는 요청인지(origin)/ 컨텐츠 타입은 무엇인지/ 어떤 클라이언트를 이용해 보냈는지(user-agent)
    - 바디: 메소드에 따라 가지고 있을 수도, 없을 수도 있다. 서버에 데이터를 보내기 위한 공간
-  
+
   - HTTP 응답도 헤더와 바디로 이루어져 있다.
+  
  <br>
  
  **HTTP의 속성**
