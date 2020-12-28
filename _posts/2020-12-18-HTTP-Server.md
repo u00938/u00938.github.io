@@ -147,4 +147,34 @@ comments: true
 <br>
 
 ## HTTP transaction ##
- - 
+ **http 모듈 불러오기**
+ 
+ ```js
+ const http = require('http');
+ ```
+ 
+ <br>
+ 
+ **서버 생성**
+  - createServer 메소드로 웹 서버 객체를 만든다.
+  - parameter로 요청에 대한 콜백 함수를 전달
+  - 생성된 서버는 몇 가지 이벤트를 가지는데, 대표적으로 3가지 이벤트는: 
+    - connection: 클라이언트와 서버 간의 연결 이벤트
+    - request: 클라이언트로부터 서버로 http 요청 발생
+    - close: 서버 종료 이벤트
+  
+  - request 이벤트가 발생하면 콜백 함수를 호출하며 request 객체와 response 객체가 파라미터로서 전달된다.
+    - request 객체는 클라이언트의 요청에 관한 정보를 담고 있다.
+    - response 객체는 서버의 응답에 대한 정보를 담고 있다.
+    
+  
+ ```js
+ const server = http.createServer((request, response) => {
+  // 응답 내용
+ })
+ ```
+ 
+ <br>
+ 
+ - request 객체는 바이트 데이터를 읽을 수 있는 ReadableStream 인터페이스를 구현하고 있으며, 이 스트림에 
+ 
