@@ -176,5 +176,83 @@ comments: true
  
  <br>
  
- - request 객체는 바이트 데이터를 읽을 수 있는 ReadableStream 인터페이스를 구현하고 있으며, 이 스트림에 
+ **request body**
+  - request 객체는 바이트 데이터를 읽을 수 있는 ReadableStream 인터페이스를 구현하고 있으며, 이 스트림에 이벤트 리스너를 등록할 수 있다.
+  - 스트림이 chunk(데이터 덩어리)를 클라이언트에게 전달/양도할 때 data 이벤트가 발생한다
+    - 스트림에 data 이벤트 리스너를 연결하면 스트림이 flowing mode로 전환되며 데이터가 사용 가능한 즉시 전달된다.
+  
+  - data 이벤트의 chunk는 Buffer 객체이며 문자열 데이터이므로 데이터를 배열에 모은 후 end 이벤트에서 문자열로 만들어야 한다.
+    - Buffer 객체는 바이트로 구성된 고정된 길이의 배열
+    
+```js
+let body = [];
+request.on('data', (chunk) => {
+  body.push(chunk);
+}).on('end', () => {
+  body = Buffer.concat(body).toString();
+});
+```
+
+<br>
+
+ **Errors**
+  - request 스트림의 에러 시 스트림에서 'error' 이벤트가 발생하며 오류를 전달한다.
+  - 이벤트에 오류에 대한 리스너가 등록되어 있지 않으면 에러가 발생하면서 node.js가 종료될 수 있다.
+  - 요청 스트림에 'error' 리스너를 추가해 오류를 처리해줘야 한다.
+
+```js
+request.on('error', (err) => {
+  console.error(err.stack);
+});
+```
+
+<br>
+
+ **HTTP status code**
+  - response의 HTTP status code는 기본적으로 200
+  - 상태 코드를 변경하려면 statusCode 프로퍼티를 설정한다.
  
+ ```js
+ response.statusCode = 404;
+ ```
+ 
+ <br>
+ 
+ **Response Headers**
+  - setHeader() 메소드로 헤더 설정
+ 
+ ```js
+ response.setHeader('Content-Type', 'application/json');
+ response.setHeader('X-Powered-By', 'bacon');
+ ```
+ 
+ <br>
+ 
+ **header data 전송**
+  - 바디 데이터를 전송할 때 헤더는 기본적인 셋팅으로 전송된다.
+  - 헤더를 사용자 설정으로 작성할 때 writeHead 메소드를 사용한다.
+  
+ ```js
+ response.writeHead(200, {
+  'Content-Type': 'application/json',
+  'X-Powered-By': 'bacon'
+ });
+ ```
+ 
+ **Response Body 전송**
+  - response 객체는 WritableStream
+  - 응답 바디는 일반적인 스트림 메소드를 사용해 작성
+  - write 메소드는 여러번 호출 가능한 데이터 전송 메소드
+  - end 메소드는 스트림에 보내는 데이터 문자열의 끝을 의미, 응답을 종료
+ 
+ ```js
+ response.write('<html>');
+ response.write('<body>');
+ response.write('<h1>Hello, World!</h1>');
+ response.write('</body>');
+ response.write('</html>');
+ response.end();
+ 
+ // end 한번으로 간단하게 작성 가능
+ response.end('<html><body><h1>Hello, World!</h1></body></html>');
+ ```
