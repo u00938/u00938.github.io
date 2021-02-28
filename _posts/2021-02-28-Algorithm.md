@@ -12,6 +12,7 @@ comments: true
 
 
 ## 문제 이해
+[문제 보러 가기](https://programmers.co.kr/learn/courses/30/lessons/42576)
 - 마라톤 참가자(participant)와 완주자(completion) 배열을 이용해 완주하지 못한 한 명의 선수를 찾는다.
 - 동명이인이 있을 수 있다.
 
